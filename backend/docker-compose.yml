@@ -1,0 +1,25 @@
+version: '3.8'
+services:
+  mongo:
+    image: mongo:6.0
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  backend:
+    build: . 
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    depends_on:
+      - mongo
+    environment:
+      - SECRET_KEY=dev-secret-change-me-please-update
+      - MONGO_URI=mongodb://mongo:27017
+      - DB_NAME=dashdb
+      - ACCESS_TOKEN_EXPIRE_MINUTES=60
+
+volumes:
+  mongo_data:
