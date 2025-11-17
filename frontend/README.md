@@ -50,10 +50,10 @@ npm run dev
 
 1. Go to http://localhost:3000/register
 2. Fill in the registration form:
-   - Username: testuser
-   - Email: test@example.com
-   - Password: Test1234
-   - Confirm Password: Test1234
+   - Username: will
+   - Email: willjoea007@gmail.com
+   - Password: 12345678
+   - Confirm Password: 12345678
 3. Click "Register" - you should be automatically logged in and redirected to /dashboard
 4. Click "Logout" in the dashboard
 5. Go to http://localhost:3000/login
@@ -99,3 +99,4 @@ npm run dev
 ## License
 
 MIT
+
